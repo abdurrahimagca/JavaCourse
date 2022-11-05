@@ -19,23 +19,29 @@ public class survey {
         }
         return total;
     }
-    //change it to void and print index-string and value
-    public static double highest(double[] av){
-        double h = av[1], l = av[1];
-        for(double i : av){
-            if(i > h)
-                h = i;
+    
+    public static void highest(double[] av){
+        double h = av[0];
+        int highestIndex = 0;
+        for(int index = 0; index < av.length; index++){
+            if(av[index] > h)
+                h = av[index];
+                highestIndex = index;
         }
-        return h;
+        System.out.println(highestIndex);
+        System.out.printf("%f %s", h, questions[highestIndex]);
     }
-    //change it to void and print index-string and value
-    public static double lowest(double[] av){
+    //lowest index is not match
+    public static void lowest(double[] av){
         double l = av[1];
-        for(double i : av){
-            if(i < l)
-                l = i;
+        int lowestindex = 0;
+        for(int index2 = 0; index2 < av.length; index2++){
+            if(av[index2] < l)
+                l = av[index2];
+                lowestindex = index2;
         }
-        return l;
+        System.out.println(lowestindex);
+        System.out.printf("%f %s", l, questions[lowestindex]);
     }
     public static void printArr(double[] n){
         for(double i : n){

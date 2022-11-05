@@ -22,7 +22,7 @@ public class App {
                 survey.answers[count].add(temp);
                 }
                 
-            System.out.println("For ....,press y");
+            System.out.println("To re-do survey press y, otherwise press any key to exit");
             e = esc.next().charAt(0);         
              
         } while (e.equals('y')|| e.equals('Y'));
@@ -32,9 +32,11 @@ public class App {
 
         //print in table
         //may not a table but an info 
-        survey.printArr(av);
-        System.out.println("highest: " + survey.highest(av));
-        System.out.println("lowest: " + survey.lowest(av));
+        //survey.printArr(av);
+        survey.highest(av);
+        System.out.println();
+        survey.lowest(av);
+        //System.out.println("lowest: " + survey.lowest(av));
         
        
     
