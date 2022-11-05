@@ -25,8 +25,10 @@ public class survey {
         int highestIndex = 0;
         for(int index = 0; index < av.length; index++){
             if(av[index] > h)
+            {
                 h = av[index];
                 highestIndex = index;
+            }
         }
         System.out.println(highestIndex);
         System.out.printf("%f %s", h, questions[highestIndex]);
@@ -37,8 +39,10 @@ public class survey {
         int lowestindex = 0;
         for(int index2 = 0; index2 < av.length; index2++){
             if(av[index2] < l)
+            {
                 l = av[index2];
                 lowestindex = index2;
+            }
         }
         System.out.println(lowestindex);
         System.out.printf("%f %s", l, questions[lowestindex]);
