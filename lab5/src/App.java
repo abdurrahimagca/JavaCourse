@@ -6,7 +6,8 @@ public class App {
         for (int x = 0; x < 5; x++) {
             survey.answers[x] = new ArrayList<Integer>();
         }
-        
+
+        String q = "'s important level for me is ";
         int temp;
         Character e = 'y';
         do {
@@ -14,7 +15,7 @@ public class App {
             Scanner sc = new Scanner(System.in);
             Scanner esc = new Scanner(System.in);
             for(int count = 0; count < 5; count++){
-                System.out.println(survey.questions[count]);
+                System.out.print(survey.questions[count] + q);
 
                 do {
                     temp = sc.nextInt();
@@ -23,31 +24,23 @@ public class App {
                 }
                 
             System.out.println("To re-do survey press y, otherwise press any key to exit");
-            e = esc.next().charAt(0);         
+            e = esc.next().charAt(0); 
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();  
+        
              
         } while (e.equals('y')|| e.equals('Y'));
         
         double av[] = new double[5];
         av = survey.getAvarage(survey.answers);
 
-        //print in table
-        //may not a table but an info 
-        //survey.printArr(av);
-        survey.highest(av);
-        System.out.println();
-        survey.lowest(av);
-        //System.out.println("lowest: " + survey.lowest(av));
-        
        
-    
-
         
-        
-
-        
-
-        
-        
+        survey.printArr(av);
+        System.out.println();
+        survey.highest(av);
+        survey.lowest(av);
+   
     }
 }
 

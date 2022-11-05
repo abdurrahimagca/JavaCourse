@@ -1,7 +1,7 @@
 import java.util.*;
 public class survey {
     
-    public static String questions[] = {"lorem", "ipsum", "sit", "amet", "consectetur"};
+    public static String questions[] = {"Poverty and Homelessness", "Climate Change", "Overpopulation", "Immigration Stresses", "Gender Inequality"};
     // should be private
     public static ArrayList<Integer>[] answers = new ArrayList[5];
 
@@ -30,8 +30,7 @@ public class survey {
                 highestIndex = index;
             }
         }
-        System.out.println(highestIndex);
-        System.out.printf("%f %s", h, questions[highestIndex]);
+        System.out.printf("%s is the highest val with %.2f\n",questions[highestIndex], h);
     }
     public static void lowest(double[] av){
         double l = av[1];
@@ -43,12 +42,11 @@ public class survey {
                 lowestindex = index2;
             }
         }
-        System.out.println(lowestindex);
-        System.out.printf("%f %s", l, questions[lowestindex]);
+        System.out.printf("%s is the highest val with %.2f\n",questions[lowestindex], l);
     }
     public static void printArr(double[] n){
-        for(double i : n){
-            System.out.printf(" %f", i);
+        for(int index = 0; index < n.length; index++){
+            System.out.printf("%s's average val: %.2f \n",questions[index], n[index]);
         }
     }
 
