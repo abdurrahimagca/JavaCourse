@@ -33,7 +33,6 @@ public class survey {
         System.out.println(highestIndex);
         System.out.printf("%f %s", h, questions[highestIndex]);
     }
-    //lowest index is not match
     public static void lowest(double[] av){
         double l = av[1];
         int lowestindex = 0;
