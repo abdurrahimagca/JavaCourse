@@ -31,6 +31,7 @@ public class App {
         av = survey.getAvarage(survey.answers);
 
         //print in table
+        //may not a table but an info 
         survey.printArr(av);
         System.out.println("highest: " + survey.highest(av));
         System.out.println("lowest: " + survey.lowest(av));

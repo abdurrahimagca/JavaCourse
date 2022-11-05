@@ -19,7 +19,7 @@ public class survey {
         }
         return total;
     }
-
+    //change it to void and print index-string and value
     public static double highest(double[] av){
         double h = av[1], l = av[1];
         for(double i : av){
@@ -28,6 +28,7 @@ public class survey {
         }
         return h;
     }
+    //change it to void and print index-string and value
     public static double lowest(double[] av){
         double l = av[1];
         for(double i : av){
