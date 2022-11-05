@@ -2,7 +2,7 @@ import java.util.*;
 public class survey {
     
     public static String questions[] = {"lorem", "ipsum", "sit", "amet", "consectetur"};
-    //this should be private
+    // should be private
     public static ArrayList<Integer>[] answers = new ArrayList[5];
 
 
@@ -20,17 +20,26 @@ public class survey {
         return total;
     }
 
-    public static void printHighLowest(double[] av){
+    public static double highest(double[] av){
         double h = av[1], l = av[1];
         for(double i : av){
             if(i > h)
                 h = i;
+        }
+        return h;
+    }
+    public static double lowest(double[] av){
+        double l = av[1];
+        for(double i : av){
             if(i < l)
                 l = i;
-
         }
-        System.out.println("highest is " + h);
-        System.out.println("lowest is " + l);
+        return l;
+    }
+    public static void printArr(double[] n){
+        for(double i : n){
+            System.out.printf(" %f", i);
+        }
     }
 
 }
