@@ -28,7 +28,14 @@ public class App {
             
              
         } while (e.equals('y')|| e.equals('Y'));
-        System.out.println(surveyhash.Survey);
+        
+        double av[] = new double[5];
+        av = surveyhash.calcAv(surveyhash.Survey, counter);
+
+
+        surveyhash.printArr(av);
+        System.out.println();
+        surveyhash.printHighLow(av);
         
         
         
