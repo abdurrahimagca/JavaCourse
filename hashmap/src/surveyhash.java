@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class surveyhash {
     public static String questions[] = {"Poverty and Homelessness ", "Climate Change ", "Overpopulation ", "Immigration Stresses ", "Gender Inequality "};
 
-    //to-do : use a method for initialize values as 0
     public static HashMap<Integer, Integer> Survey = new HashMap<Integer, Integer>() {{
         put(0, 0);
         put(1, 0);

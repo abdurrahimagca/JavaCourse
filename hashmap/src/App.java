@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class App {
-
   
     public static void main(String[] args) throws Exception {
         int temp,counter = 0;
@@ -25,13 +24,11 @@ public class App {
             counter++;
             System.out.print("\033[H\033[2J");  
             System.out.flush(); 
-            
-             
+                    
         } while (e.equals('y')|| e.equals('Y'));
         
         double av[] = new double[5];
         av = surveyhash.calcAv(surveyhash.Survey, counter);
-
 
         surveyhash.printArr(av);
         System.out.println();
